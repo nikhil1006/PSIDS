@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		body
+		{
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 18pt;
+			margin:0% auto;
+			text-align: center;
+			max-width: 1080;
+			color:white;
+		}
+		table {
+		border-collapse: separate;
+		border-spacing: 40px 0;
+		}
+
+		td {
+		padding: 10px 0;
+		}
+	</style>
+<head>
+	<title>PSDIS</title>
+	<h2 style="text-align: center;">
+		PASS SCHEDULER DISPLAY SYSTEM
+	</h2>
+</head>
+<body bgcolor="#121212">
+	<table id='mt'>
+		<tr style="color: deeppink;">
+		<th>sat_id</th>
+		<th>orbit_no</th>
+		<th>dt_on</th>
+		<th>dt_off</th>
+		<th>m_tid</th>
+		<th>b_tid</th>
+		<th>Countdown</th>
+		</tr>
+
+		<?php
+		$conn = mysqli_connect("localhost", "root", "", "station_info");
+		// Check connection
+		if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+		}
+		$sql = "SELECT sat_id, orbit_no, dt_on,dt_off,m_tid,b_tid FROM pass_info";
+		$result = $conn->query($sql);
+		if ($result->num_rows > 0) {
+		// output data of each row
+
+		while($row = $result->fetch_assoc()) {
+		echo
+		 "<tr>
+			<td>".$row["sat_id"]."</td>
+			<td>".$row["orbit_no"]."</td>
+			<td>".$row["dt_on"]."</td>
+			<td>".$row["dt_off"]."</td>
+			<td>".$row["m_tid"]."</td>
+			<td>".$row["b_tid"]."</td>
+			<td></td></tr>";
+		}
+		echo "</table>";
+		} else { echo "0 results"; }
+		$conn->close();
+		?>
+	</table>	
+	<script>
+		var x=document.getElementById('mt');
+		var v_cells=x.getElementsByTagName('td');
+		var table_len = parseInt(document.getElementById("mt").rows.length,10); 
+		(function f(){
+		for(var i=0;i<table_len;i++){
+			var ontime =new Date(v_cells[7*i+3].innerHTML);
+			var t=Date.now()-ontime;
+			var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+			var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+			var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+			v_cells[7*i+6].innerHTML= hours+":"+minutes +":" + seconds;
+			setTimeout(f,1000);
+		}})();
+	</script>	
+</body>
+
+</html>
