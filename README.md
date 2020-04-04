@@ -48,7 +48,7 @@
 
 ### 3.1 Results for Backend Module
 
-<img src="https://github.com/nikhilsathwik2806/PSIDS/blob/master/Screenshot%20(890).png" width=900/></img>
+<img src="https://github.com/nikhil1006/PSIDS/blob/master/Screenshot%20(890).png" width=900/></img>
 
 <p align="center"><i><b>Figure 3.1 pass_info data</b></i></p>
 
@@ -56,11 +56,11 @@
 
 ### 3.2 Results for WEB browser interface
 
-<img src="https://github.com/nikhilsathwik2806/PSIDS/blob/master/Screenshot%20(887).png" width=900/></img>
+<img src="https://github.com/nikhil1006/PSIDS/blob/master/Screenshot%20(887).png" width=900/></img>
 
 <p align="center"><i><b>Figure 3.2 PSIDS web page</b></i></p>
 
-<img src="https://github.com/nikhilsathwik2806/PSIDS/blob/master/PSIDS.gif" width=900/></img>
+<img src="https://github.com/nikhil1006/PSIDS/blob/master/PSIDS.gif" width=900/></img>
 
 ## Prerequisites
 * you need *Anaconda Distribution* with *R kernel* installed & also *XAMPP* installed.
@@ -85,7 +85,7 @@ $ conda install -c r r-essentials
 
 ## Authors
 
-* **Sathwik Vadlamani** - *Initial design work, Logic, debugging, pre-processing, doccumentation* - [nikhilsathwik2806](https://github.com/nikhilsathwik2806)
+* **Sathwik Vadlamani** - *Initial design work, Logic, debugging, pre-processing, doccumentation* - [nikhil1006](https://github.com/nikhil1006)
 * **Shriram Ravindranathan** - *logic Debugging ,html & php coding* - [notshriram](https://github.com/notshriram)
 
 ## License
