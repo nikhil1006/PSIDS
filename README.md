@@ -48,7 +48,7 @@
 
 ### 3.1 Results for Backend Module
 
-<img src="https://photos.google.com/u/2/photo/AF1QipOkyqk5PHmSR2Be4AoXzyhpc5UNB9yzz5IvYucL" width=900/></img>
+<img src="https://github.com/nikhil1006/PSIDS/blob/master/Screenshot%20(890).png" width=900/></img>
 
 <p align="center"><i><b>Figure 3.1 pass_info data</b></i></p>
 
